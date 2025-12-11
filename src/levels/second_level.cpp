@@ -18,12 +18,24 @@ biv::GameLevel* SecondLevel::get_next() {
 // 									PROTECTED
 // ----------------------------------------------------------------------------
 void SecondLevel::init_data() {
-	ui_factory->create_mario({39, 10}, 3, 3);
-	
-	ui_factory->create_ship({20, 25}, 40, 2);
-	ui_factory->create_ship({60, 20}, 10, 7);
-	ui_factory->create_ship({80, 25}, 20, 2);
-	ui_factory->create_ship({120, 20}, 10, 7);
-	ui_factory->create_ship({150, 25}, 40, 2);
-	ui_factory->create_ship({210, 20}, 10, 7);
+    ui_factory->create_mario({39, 10}, 3, 3);
+    
+    ui_factory->create_ship({20, 25}, 40, 2);
+    ui_factory->create_enemy({30, 20}, 3, 2);
+    
+    ui_factory->create_ship({60, 20}, 10, 7);
+    ui_factory->create_enemy({62, 13}, 3, 2);
+    
+    ui_factory->create_ship({80, 25}, 20, 2);
+    ui_factory->create_enemy({85, 20}, 3, 2);
+    ui_factory->create_full_box({89, 15}, 5, 3);
+    
+    ui_factory->create_ship({120, 20}, 10, 7);
+    ui_factory->create_enemy({122, 13}, 3, 2);
+    
+    ui_factory->create_ship({150, 25}, 40, 2);
+    ui_factory->create_enemy({165, 20}, 3, 2);
+    ui_factory->create_full_box({165, 15}, 5, 3);
+    
+    ui_factory->create_ship({210, 20}, 10, 7);
 }
