@@ -21,7 +21,9 @@ void ThirdLevel::init_data() {
 
     ui_factory->create_ship({20, 25}, 15, 2);
     ui_factory->create_mario({22, 22}, 3, 3);
-    
+
+    ui_factory->create_flying_enemy({50, 8}, 3, 2, 50, 80);
+
     ui_factory->create_box({40, 20}, 5, 3);     
     ui_factory->create_box({45, 20}, 5, 3);
     ui_factory->create_box({50, 20}, 5, 3);
@@ -36,7 +38,6 @@ void ThirdLevel::init_data() {
     ui_factory->create_box({100, 20}, 5, 3);      
     ui_factory->create_box({105, 20}, 5, 3);
     ui_factory->create_full_box({95, 13}, 5, 3);
-
 
     ui_factory->create_ship({130, 25}, 15, 2);
     ui_factory->create_enemy({133, 23}, 3, 2);

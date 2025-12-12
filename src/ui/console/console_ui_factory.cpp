@@ -16,6 +16,7 @@ void ConsoleUIFactory::clear_data() {
 	ships.clear();
 	enemies.clear();
 	moneys.clear();
+	flying_enemies.clear();
 }
 
 void ConsoleUIFactory::create_box(
@@ -88,6 +89,19 @@ void ConsoleUIFactory::create_ship(
 	game_map->add_obj(ship);
 }
 
+void ConsoleUIFactory::create_flying_enemy(
+    const Coord& top_left, const int width, const int height,
+    float minX, float maxX) 
+{
+    ConsoleFlyingEnemy* flying_enemy = new ConsoleFlyingEnemy(
+        top_left, width, height, minX, maxX);
+    flying_enemies.push_back(flying_enemy);
+	game->add_map_movable(flying_enemy);
+    game->add_movable(flying_enemy);
+    game->add_collisionable(flying_enemy);
+    game_map->add_obj(flying_enemy);
+}
+
 biv::GameMap* ConsoleUIFactory::get_game_map() {
 	return game_map;
 }
@@ -95,6 +109,7 @@ biv::GameMap* ConsoleUIFactory::get_game_map() {
 biv::Mario* ConsoleUIFactory::get_mario() {
 	return mario;
 }
+
 
 // ----------------------------------------------------------------------------
 // 									PRIVATE
