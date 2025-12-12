@@ -29,10 +29,12 @@ void ThirdLevel::init_data() {
     ui_factory->create_box({50, 20}, 5, 3);
     ui_factory->create_full_box({40, 13}, 5, 3);
 
+    ui_factory->create_jumping_enemy({70, 12}, 3, 2);
+
     ui_factory->create_ship({70, 15}, 15, 12);
     ui_factory->create_box({70, 5}, 15, 3);
-    ui_factory->create_enemy({72, 12}, 3, 2);
-    ui_factory->create_enemy({78, 12}, 3, 2);
+    // ui_factory->create_enemy({72, 12}, 3, 2);
+    // ui_factory->create_enemy({78, 12}, 3, 2);
     
     ui_factory->create_box({95, 20}, 5, 3);
     ui_factory->create_box({100, 20}, 5, 3);      
